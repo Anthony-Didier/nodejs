@@ -1,0 +1,30 @@
+- Créer un nouveau dossier
+- npm init
+- npm i -g nodemon --save
+- npm i express
+- npm i mysql2
+- npm install --save sequelize
+- npm install sequelize-cli
+- npx sequelize init
+- faire les modifs sur config.json (mdp, nom bdd)
+- npx sequelize db:create
+
+Pour créer les différentes tables:
+- npx sequelize model:create --name [nom de la table] --attributes [nom attribut]:[type attribut],[nom attribut]:[type attribut]
+- créer les dossiers controllers et routes
+
+Créer les associations de tables :
+- définir les associations dans les models créés
+
+Quand tous les fichiers sont créés :
+- npx sequelize db:migrate
+
+Pour lancer le serveur :
+- nodemon [nom du fichier index] (en général : app.js)
+
+Créer des seeders (= préremplir la bdd avec des éléments dans les tables):
+- npx sequelize seed:generate --name [nom table]
+- npx sequelize db:seed:all
+
+Pour les autorisations jwt :
+- npm i jsonwebtoken bcrypt dotenv cors
